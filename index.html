@@ -55,26 +55,10 @@ body {
 
 <div class="container items">
     <div class="row">
-        <div class="col-xs-6 item" v-on="click: toggleItem">
-            <img src="http://stat.ameba.jp/user_images/20131206/22/okayu1206/bf/96/j/o0480057612772498518.jpg" class="img-thumbnail" alt="">
-        </div>
-        <div class="col-xs-6 item">
-            <!-- idのところは変更 -->
-            <a href="#">
-                <img src="http://stat.ameba.jp/user_images/20131206/22/okayu1206/bf/96/j/o0480057612772498518.jpg" class="img-thumbnail" alt="">
-            </a>
-        </div>
-        <div class="col-xs-6 item">
-            <!-- idのところは変更 -->
-            <a href="#">
-                <img src="http://stat.ameba.jp/user_images/20131206/22/okayu1206/bf/96/j/o0480057612772498518.jpg" class="img-thumbnail" alt="">
-            </a>
-        </div>
-        <div class="col-xs-6 item">
-            <!-- idのところは変更 -->
-            <a href="#">
-                <img src="http://stat.ameba.jp/user_images/20131206/22/okayu1206/bf/96/j/o0480057612772498518.jpg" class="img-thumbnail" alt="">
-            </a>
+        <div v-repeat="items" v-on="click: toggleItem(this)">
+            <div class="{{col}} item">
+                <img src="{{img}}" class="img-thumbnail" alt="">
+            </div>
         </div>
     </div>
 </div>
